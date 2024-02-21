@@ -58,7 +58,7 @@ class TodoTest extends TestCase
 
         $response = $this->withHeaders([
             'Authorization' => 'Bearer ' . $token,
-        ])->put('/api/v1/todos/1', $data);
+        ])->put('/api/v1/todos/5', $data);
 
         $response->assertStatus(200)->assertJson([
             'success' => 'true',
@@ -77,7 +77,7 @@ class TodoTest extends TestCase
 
         $response = $this->withHeaders([
             'Authorization' => 'Bearer ' . $token,
-        ])->put('/api/v1/todos/update-status/1', $data);
+        ])->put('/api/v1/todos/update-status/5', $data);
 
         $response->assertStatus(200)->assertJson([
             'success' => 'true',

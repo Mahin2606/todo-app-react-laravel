@@ -14,8 +14,8 @@ class UserTest extends TestCase
     public function test_register()
     {
         $userData = [
-            'name' => 'Tanbir',
-            'email' => 'tanbir@gmail.com',
+            'name' => 'Sam',
+            'email' => 'sam@gmail.com',
             'password' => '123456',
             'password_confirmation' => '123456'
         ];
