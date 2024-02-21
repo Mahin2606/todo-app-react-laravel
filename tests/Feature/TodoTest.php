@@ -2,13 +2,15 @@
 
 namespace Tests\Feature;
 
-use App\Models\Todo;
 use App\Models\User;
 
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
 
 class TodoTest extends TestCase
 {
+    use DatabaseTransactions;
+
     public function test_store()
     {
         $user = User::where('email','tanbir@gmail.com')->first();
