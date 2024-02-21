@@ -13,7 +13,7 @@ class TodoTest extends TestCase
 
     public function test_store()
     {
-        $user = User::where('email','tanbir@gmail.com')->first();
+        $user = User::where('email','mike@example.com')->first();
         $token = $user->createToken('Authorization')->accessToken;
 
         $formData = [
@@ -33,7 +33,7 @@ class TodoTest extends TestCase
 
     public function test_index()
     {
-        $user = User::where('email','tanbir@gmail.com')->first();
+        $user = User::where('email','mike@example.com')->first();
         $token = $user->createToken('Authorization')->accessToken;
 
         $response = $this->withHeaders([
@@ -48,7 +48,7 @@ class TodoTest extends TestCase
 
     public function test_update()
     {
-        $user = User::where('email','tanbir@gmail.com')->first();
+        $user = User::where('email','mike@example.com')->first();
         $token = $user->createToken('Authorization')->accessToken;
 
         $data = [
@@ -68,7 +68,7 @@ class TodoTest extends TestCase
 
     public function test_update_status()
     {
-        $user = User::where('email','tanbir@gmail.com')->first();
+        $user = User::where('email','mike@example.com')->first();
         $token = $user->createToken('Authorization')->accessToken;
 
         $data = [

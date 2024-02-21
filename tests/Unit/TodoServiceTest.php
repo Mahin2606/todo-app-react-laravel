@@ -12,7 +12,7 @@ class TodoServiceTest extends TestCase
 {
     use DatabaseTransactions;
     
-    public function testCreateOrUpdate()
+    public function test_create_or_update()
     {
         $service = new TodoService();
         $todo = $service->createOrUpdate([
@@ -29,7 +29,7 @@ class TodoServiceTest extends TestCase
         $this->assertEquals(1, $todo->user_id);
     }
 
-    public function testUpdateStatus()
+    public function test_update_status()
     {
         $service = new TodoService();
         $todo = Todo::first();
